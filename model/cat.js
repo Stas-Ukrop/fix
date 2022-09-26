@@ -14,7 +14,8 @@ const catSchema = new Schema({
         default: false
     },
     owner: {
-        type:mongoose.SchemaTypes.ObjectId,ref:'user'
+      type: SchemaTypes.ObjectId,
+      ref: 'user',
     },
     features: {
         type: Array,

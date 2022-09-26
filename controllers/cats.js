@@ -26,7 +26,7 @@ const getById=async(req,res,next)=>{
 const create=async(req,res,next)=>{
     try {
         const userId = req.user.id
-        const cat=await Cats.create({userId,...req.body})
+        const cat=await Cats.create(userId,req.body)
         res.status(201).json({status:'success',code:201,data:{cat}})
     }catch(error){
         next(error)
